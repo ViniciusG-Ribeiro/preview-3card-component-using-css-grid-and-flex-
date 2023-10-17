@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --color-bright: hsl(31, 77%, 52%);
+    --color-Dark-cyan: hsl(184, 100%, 22%);
+    --color-Very-dark-cyan:hsl(179, 100%, 13%);
+
+    --color-transparent:hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+    --color-Very-light-gray: hsl(0, 0%, 95%); /*background, headings, buttons*/
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--color-Very-light-gray);
+}
+
+main{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book{
+    max-width: 1440px;
+    min-width: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.models{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    color: var(--color-Very-light-gray);
+    font-family:'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+img{
+    margin-bottom: 30px;
+}
+
+.tittle{
+    font-size: 4.0em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+}
+
+.description{
+    margin-bottom: 70px;
+}
+
+.sedans{
+    background-color: var(--color-bright);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.suvs{
+    background-color: var(--color-Dark-cyan);
+}
+
+.luxury{
+    background-color: var(--color-Very-dark-cyan);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.description{
+    font-size: 1.5em;
+    color: var(--color-transparent);
+}
+
+.button{
+    background-color: var(--color-Very-light-gray);
+    font-size: 1.5em;
+    text-transform: capitalize;
+    border: 2px solid var(--color-Very-light-gray);
+    border-radius: 40px;
+    text-align: center;
+    max-width: 150px;
+    padding: 15px 0px;
+    transition: 500ms;
+}
+
+.button:hover{
+    color: var(--color-Very-light-gray);
+    transition: 500ms;
+}
+
+.sedans .button{
+    color: var(--color-bright);
+}
+
+.sedans .button:hover{
+    background-color: var(--color-bright);
+    color: var(--color-Very-light-gray);
+}
+
+.suvs .button{
+    color: var(--color-Dark-cyan);
+}
+
+.suvs .button:hover{
+    background-color: var(--color-Dark-cyan);
+    color: var(--color-Very-light-gray);
+}
+
+.luxury .button{
+    color: var(--color-Very-dark-cyan);
+}
+
+.luxury .button:hover{
+    background-color: var(--color-Very-dark-cyan);
+    color: var(--color-Very-light-gray);
+}
+
+@media (max-width:705px) {
+
+    main{
+        margin: 0px 10%;
+    }
+
+    .book{
+        grid-template-columns: 1fr;
+    }
+
+    .sedans{
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .luxury{
+        border-radius: 0px 0px 10px 10px;
+    }
+}
+
+@media (max-width:540px) {
+
+    main{
+        margin: 0px;
+    }
+}
